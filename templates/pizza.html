@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css')}}">
+    <title>Python Flask App</title>
+</head>
+<body>
+    <h1>How Much Pizza Per Pizza?</h1>
+    <form id="pizza-form" action="/submit" method="POST">
+        <div id="pizza-form-a">
+            <label for="diameterA">Pizza A Diameter (in inches): </label>
+            <input type="number" id="diameterA" name="diameterA" required>
+        </div>
+        <div id="pizza-form-b">
+            <label for="diameterA">Pizza A Diameter (in inches): </label>
+            <input type="number" id="diameterA" name="diameterA" required>
+        </div>
+        <button type="submit">Calculate</button>
+    </form>
+    <div id="pizza-results">
+        <div>Pizza A has <span style="color:deeppink; font-weight:bolder;">{{areaA}}</span> in² of pizza.</div>
+        <div>Pizza B has <span style="color:dodgerblue; font-weight:bolder;">{{areaB}}</span> in² of pizza.</div>
+        <br>
+        <div>Pizza A is equivalent to <span style="color:blueviolet; font-weight:bolder;">{{ratio}}%</span> of Pizza B.</div>
+    </div>
+</body>
+</html>
