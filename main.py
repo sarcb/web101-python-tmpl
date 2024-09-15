@@ -6,7 +6,7 @@ app = Flask(__name__)
 @app.route("/")
 @app.route("/submit")
 def index():
-    return render_template("pizza.html", areaA="0", areaB="0", ratio="0")
+    return render_template("pizza.html", name="PythonBot", areaA="0", areaB="0", ratio="0")
 
 @app.route("/submit", methods=['POST'])
 def submit():
