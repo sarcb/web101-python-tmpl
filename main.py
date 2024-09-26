@@ -8,9 +8,7 @@ app = Flask(__name__)
 def index():
     return render_template("pizza.html", name="PythonBot", areaA="0", areaB="0", ratio="0")
 
-@app.route("/submit", methods=['POST'])
-def submit():
-    return index()
+# Add your /submit route here
 
 def main():
     app.run(port=int(os.environ.get('PORT', 80)))
